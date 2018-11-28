@@ -10,6 +10,9 @@ import { CarsEditComponent } from './cars-edit/cars-edit.component';
 import { CarsDetailComponent } from './cars-detail/cars-detail.component';
 import { CarsDeleteComponent } from './cars-delete/cars-delete.component';
 import { FilterPipe } from "./filter.pipe";
+import { UnicFilterPipe } from "./unic.filter.pipe";
+import { SortPipe } from "./sort.pipe";
+import { ChkFilterPipe } from "./chk.filter.pipe";
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { FilterPipe } from "./filter.pipe";
     CarsEditComponent,
     CarsDetailComponent,
     CarsDeleteComponent,
-    FilterPipe
+    FilterPipe,
+    UnicFilterPipe,
+    SortPipe,
+    ChkFilterPipe
   ],
   imports: [
     BrowserModule,

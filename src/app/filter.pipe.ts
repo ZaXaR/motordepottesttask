@@ -14,7 +14,8 @@ export class FilterPipe implements PipeTransform {
       return items;
     }
 
-    if (filter && Array.isArray(items)) {
+    // if (filter && Array.isArray(items)) {
+     if (filter) {
       let filterKeys = Object.keys(filter);
 
       if (defaultFilter) {

@@ -21,7 +21,6 @@ export class ApiService {
   getCars (): Observable<Cars[]> {
     return this.http.get<Cars[]>(this.carUrl)
   }
-
   getCar(id: number): Observable<Cars> {
     const url = `${this.carUrl}/${id}`;
     return this.http.get<Cars>(url);

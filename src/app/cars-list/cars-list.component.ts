@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ApiService } from  '../api.service';
 import { Cars } from  '../cars';
 
@@ -13,7 +13,7 @@ export class CarsListComponent implements OnInit {
   public searchText : string;
   cars: Cars[];
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.getCars()

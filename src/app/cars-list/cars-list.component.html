@@ -6,6 +6,14 @@
   <input [(ngModel)]="searchText" class="form-control" type="text" placeholder="Search by name and age" aria-label="Search">
 </div>
 
-<div *ngFor="let car of cars| carFilter: {name: searchText, age:searchText};">
+<div class="form form-inline">
+  <div *ngFor="let car of cars | unicFilter: 'age' | sort: 'age'; let i = index;" class="form-check" style="padding-right:20px;">
+    <!--<label class="form-check-label">-->
+      <input type="checkbox" class="form-check-input" (change)="onCheck(car.age)" [value]="car.age"> {{car.age}}
+    <!--</label>-->
+  </div>
+</div>
+
+<div *ngFor="let car of cars | carFilter: {name: searchText, age:searchText};">
   <a [routerLink]="['/car', car.id]" class="badge" style="color:black"><span class="badge">{{car.id}}</span>  {{ car.name }}</a>
 </div>
